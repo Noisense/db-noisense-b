@@ -1,0 +1,14 @@
+version: '3'
+services: 
+  db:
+    image: mariadb:10.5
+    ports:
+      - 3307:3307
+    environment:
+      - MYSQL_ROOT_PASSWORD=noisense
+      - MYSQL_DATABASE=noisense
+    volumes:
+      - mariadb_data:/var/lib/mysql
+
+volumes:
+  mariadb_data:
